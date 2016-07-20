@@ -1,0 +1,142 @@
+
+
+
+
+C:\Users\MyUserName\AppData\Roaming\Composer\vendor\bin
+
+
+C:\Users\106669\AppData\Roaming\Composer\vendor\bin
+
+--------------------------------------------
+Try this to solve composer command issue....
+http://leedavis81.github.io/global-installation-of-composer-on-windows/
+
+OPEN PHP SHELL ...
+
+1. INstall composer...
+php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
+
+2. Create a composer.bat by running the following command:
+echo "@ECHO OFF" "php '%~dp0composer.phar' %*" > composer.bat
+
+run COMPOSER IN SHELL... 
+IF ERROR....
+'¦@' is not recognized as an internal or external command,
+
+THEN DELETE COMPOSER.BAT FILE AND CREATE NEW COMPOSER.BAT FILE AND ADD BELOW LINES...
+@ECHO OFF
+php "%~dp0composer.phar" %*
+
+run COMPOSER IN SHELL... 
+
+*****************************************
+
+
+add environment variable php...
+
+run composer from CMD...
+c:\xampp > composer...
+
+------------------------------------------
+
+
+STEP22:
+
+CREATE DIRECTORY ANYWHERE AND GOTO THAT FOLDER IN SHELL AND DO BELOW TO INSTALL LARAVEL
+composer create-project laravel/laravel –prefer-dist
+
+ABOVE DOWNLOADS ALL FILES....
+
+ONCE IT IS DONE....
+php artisan serve
+
+OPEN LINK AS SHOWN ... PAGE WILL SHOW -- LARAVEL 5...
+
+CODE....
+
+start Laravel
+php artisan serve
+
+Naming the Application
+php artisan app:name <new name>
+
+Maintenance Mode
+php artisan down  --- start
+php artisan up    --- stop
+
+Define Middleware
+php artisan make:middleware <middleware-name>
+
+Create Controller
+php artisan make:controller TestController --plain
+
+--plain throws error...
+This will create a plain constructor as we are passing the argument — plain
+
+Run php artisan route:list and check if auth shows up on the list
+
+
+
+
+
+
+*******************************************
+
+Define Middleware
+Middleware acts as a middle man between request and response. It is a type of filtering mechanism.
+Ex; User authenticate
+
+****Register Middleware *****
+
+Two types Middleware...
+Global Middleware : will run on every HTTP request of the application.
+Route Middleware  : will be assigned to a specific route. 
+
+The middleware can be registered at app/Http/Kernel.php. This file contains two properties $middleware and $routeMiddleware. 
+$middleware property is used to register Global Middleware and $routeMiddleware property is used to register route specific middleware.
+
+Middleware Parameters
+application has different roles like user, admin, super admin etc.
+we can pass our custom argument after the $next argument.
+
+public function handle($request, Closure $next, $role) {
+      echo "Role: ".$role;
+      return $next($request);
+   }
+
+
+Terminable Middleware
+Terminable middleware performs some task after the response has been sent to the browser.
+
+-------------------------------------
+Basic Controllers
+
+php artisan make:controller <controller-name> --plain
+This will create a plain constructor as we are passing the argument — plain. 
+If you don’t want to create a plain constructor, you can simply ignore the argument
+
+File will be created at ... seen at app/Http/Controllers
+
+
+
+--------------------------------------
+
+Retrieving the Request URI
+
+ “path” method is used to retrieve the requested URI
+“is” method is used to retrieve the requested URI which matches the particular pattern 
+specified in the argument of the method. 
+
+“url” methodTo get the full URL, we can use the .
+
+Retrieving Input
+1. using the input() method
+	$name = $request->input('username');
+2. Using the properties of Request instance
+	$request->username
+
+
+
+
+
+
