@@ -1,6 +1,6 @@
 
 
-
+12312121212
 
 C:\Users\MyUserName\AppData\Roaming\Composer\vendor\bin
 
@@ -21,7 +21,7 @@ echo "@ECHO OFF" "php '%~dp0composer.phar' %*" > composer.bat
 
 run COMPOSER IN SHELL... 
 IF ERROR....
-'¶@' is not recognized as an internal or external command,
+'¬¶@' is not recognized as an internal or external command,
 
 THEN DELETE COMPOSER.BAT FILE AND CREATE NEW COMPOSER.BAT FILE AND ADD BELOW LINES...
 @ECHO OFF
@@ -43,7 +43,7 @@ c:\xampp > composer...
 STEP22:
 
 CREATE DIRECTORY ANYWHERE AND GOTO THAT FOLDER IN SHELL AND DO BELOW TO INSTALL LARAVEL
-composer create-project laravel/laravel ñprefer-dist
+composer create-project laravel/laravel ‚Äìprefer-dist
 
 ABOVE DOWNLOADS ALL FILES....
 
@@ -71,7 +71,7 @@ Create Controller
 php artisan make:controller TestController --plain
 
 --plain throws error...
-This will create a plain constructor as we are passing the argument ó plain
+This will create a plain constructor as we are passing the argument ‚Äî plain
 
 Run php artisan route:list and check if auth shows up on the list
 
@@ -112,8 +112,8 @@ Terminable middleware performs some task after the response has been sent to the
 Basic Controllers
 
 php artisan make:controller <controller-name> --plain
-This will create a plain constructor as we are passing the argument ó plain. 
-If you donít want to create a plain constructor, you can simply ignore the argument
+This will create a plain constructor as we are passing the argument ‚Äî plain. 
+If you don‚Äôt want to create a plain constructor, you can simply ignore the argument
 
 File will be created at ... seen at app/Http/Controllers
 
@@ -123,11 +123,11 @@ File will be created at ... seen at app/Http/Controllers
 
 Retrieving the Request URI
 
- ìpathî method is used to retrieve the requested URI
-ìisî method is used to retrieve the requested URI which matches the particular pattern 
+ ‚Äúpath‚Äù method is used to retrieve the requested URI
+‚Äúis‚Äù method is used to retrieve the requested URI which matches the particular pattern 
 specified in the argument of the method. 
 
-ìurlî methodTo get the full URL, we can use the .
+‚Äúurl‚Äù methodTo get the full URL, we can use the .
 
 Retrieving Input
 1. using the input() method
